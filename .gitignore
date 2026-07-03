@@ -1,1 +1,42 @@
+# Composer dependencies
 /vendor/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime storage
+/storage/cache/*
+/storage/logs/*
+/storage/temp/*
+!/storage/cache/.gitkeep
+!/storage/logs/.gitkeep
+!/storage/temp/.gitkeep
+
+# Test and quality tool output
+/coverage/
+/.phpunit.cache/
+/.phpunit.result.cache
+/.php-cs-fixer.cache
+/.phpstan.cache/
+/.psalm/
+
+# Local editor and operating system files
+/.idea/
+/.vscode/*
+!/.vscode/extensions.json
+!/.vscode/settings.json
+!/.vscode/launch.json
+!/.vscode/tasks.json
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Local build and temporary output
+/build/
+/dist/
+/tmp/
+*.log

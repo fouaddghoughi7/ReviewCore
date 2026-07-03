@@ -5,14 +5,22 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Reviewcore\\Reviewcore\\": "src/"
+            "ReviewCore\\": "src/"
         }
     },
-    "authors": [
+    "repositories": [
         {
-            "name": "Fouad Dghoughi"
+            "type": "path",
+            "url": "packages/core",
+            "options": {
+                "symlink": true
+            }
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "php": "^8.3",
+        "reviewcore/core": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

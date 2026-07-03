@@ -1,0 +1,14 @@
+{
+    "name": "reviewcore/core",
+    "description": "ReviewCore Core Package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ReviewCore\\Core\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.3"
+    }
+}
