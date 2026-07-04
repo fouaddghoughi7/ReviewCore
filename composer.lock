@@ -4,29 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f61658bd1fa91432bd2abcda000e7e7",
+    "content-hash": "531b6e795a111b2b4c7c283d79734aec",
     "packages": [
         {
             "name": "reviewcore/core",
-            "version": "dev-main",
+            "version": "0.1.x-dev",
             "dist": {
                 "type": "path",
                 "url": "packages/core",
-                "reference": "0a113a91f8d3e963167715c7cb16ecec5e2dbc90"
+                "reference": "44341e6fe89adab16b2290239e5d270063b2d078"
             },
             "require": {
                 "php": "^8.3"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                },
+                "reviewcore": {
+                    "package": "core",
+                    "role": "runtime-foundation"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "ReviewCore\\Core\\": "src/"
                 }
             },
+            "scripts": {
+                "check:composer": [
+                    "composer validate --strict"
+                ]
+            },
             "license": [
                 "MIT"
             ],
-            "description": "ReviewCore Core Package",
+            "authors": [
+                {
+                    "name": "ReviewCore Contributors",
+                    "role": "Maintainers"
+                }
+            ],
+            "description": "Runtime foundation package for the ReviewCore modular review platform.",
+            "homepage": "https://github.com/fouaddghoughi7/ReviewCore",
+            "keywords": [
+                "core",
+                "foundation",
+                "monorepo",
+                "reviewcore",
+                "runtime"
+            ],
+            "support": {
+                "issues": "https://github.com/fouaddghoughi7/ReviewCore/issues",
+                "source": "https://github.com/fouaddghoughi7/ReviewCore"
+            },
             "transport-options": {
                 "symlink": true,
                 "relative": true
@@ -35,8 +67,10 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {},
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "reviewcore/core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

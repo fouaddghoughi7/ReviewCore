@@ -1,14 +1,47 @@
 {
     "name": "reviewcore/core",
-    "description": "ReviewCore Core Package",
+    "description": "Runtime foundation package for the ReviewCore modular review platform.",
     "type": "library",
+    "keywords": [
+        "reviewcore",
+        "core",
+        "runtime",
+        "foundation",
+        "monorepo"
+    ],
+    "homepage": "https://github.com/fouaddghoughi7/ReviewCore",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "ReviewCore Contributors",
+            "role": "Maintainers"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/fouaddghoughi7/ReviewCore/issues",
+        "source": "https://github.com/fouaddghoughi7/ReviewCore"
+    },
+    "require": {
+        "php": "^8.3"
+    },
     "autoload": {
         "psr-4": {
             "ReviewCore\\Core\\": "src/"
         }
     },
-    "require": {
-        "php": "^8.3"
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "check:composer": "composer validate --strict"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        },
+        "reviewcore": {
+            "package": "core",
+            "role": "runtime-foundation"
+        }
     }
 }

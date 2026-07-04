@@ -1,26 +1,68 @@
 {
     "name": "reviewcore/reviewcore",
-    "description": "ReviewCore Enterprise Review Platform",
+    "description": "Enterprise-grade AI-powered review management platform built as a modular Composer monorepo.",
     "type": "project",
+    "keywords": [
+        "reviewcore",
+        "reviews",
+        "review-management",
+        "ai",
+        "seo",
+        "schema",
+        "wordpress",
+        "monorepo"
+    ],
+    "homepage": "https://github.com/fouaddghoughi7/ReviewCore",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "ReviewCore Contributors",
+            "role": "Maintainers"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/fouaddghoughi7/ReviewCore/issues",
+        "source": "https://github.com/fouaddghoughi7/ReviewCore"
+    },
+    "require": {
+        "php": "^8.3",
+        "reviewcore/core": "0.1.x-dev"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/*",
+            "options": {
+                "symlink": true,
+                "versions": {
+                    "reviewcore/core": "0.1.x-dev"
+                }
+            }
+        }
+    ],
     "autoload": {
         "psr-4": {
             "ReviewCore\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "packages/core",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
-    "require": {
-        "php": "^8.3",
-        "reviewcore/core": "*"
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {},
+        "preferred-install": {
+            "reviewcore/*": "source",
+            "*": "dist"
+        },
+        "sort-packages": true
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "scripts": {
+        "check:composer": "composer validate --strict"
+    },
+    "extra": {
+        "reviewcore": {
+            "monorepo": true,
+            "package-directory": "packages",
+            "stage": "foundation"
+        }
+    }
 }
