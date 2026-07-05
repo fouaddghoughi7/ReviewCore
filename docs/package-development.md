@@ -80,3 +80,6 @@ because another package or application needs a stable abstraction.
 Every new feature package must include useful documentation and tests. Tests are
 required before business feature development begins, once the testing milestone
 standardizes the project test stack.
+
+See [Testing](testing.md) for the repository test conventions, suite
+organization, and the root PHPUnit configuration.

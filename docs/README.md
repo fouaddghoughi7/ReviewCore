@@ -12,6 +12,7 @@ This directory contains contributor-facing documentation for ReviewCore.
   Composer path repositories.
 - [Package Development](package-development.md): package boundaries, contracts,
   providers, and dependency rules.
+- [Testing](testing.md): test organization, suite categories, and running tests.
 
 ## Architecture And Planning
 

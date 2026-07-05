@@ -53,10 +53,18 @@
             "reviewcore/*": "source",
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "audit": {
+            "ignore": ["PKSA-z3gr-8qht-p93v"]
+        }
     },
     "scripts": {
-        "check:composer": "composer validate --strict"
+        "check:composer": "composer validate --strict",
+        "test": "phpunit",
+        "test:unit": "phpunit --testsuite Unit",
+        "test:integration": "phpunit --testsuite Integration",
+        "test:architecture": "phpunit --testsuite Architecture",
+        "test:contract": "phpunit --testsuite Contract"
     },
     "extra": {
         "reviewcore": {
@@ -64,5 +72,8 @@
             "package-directory": "packages",
             "stage": "foundation"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
     }
 }
